@@ -77,6 +77,7 @@ __FBSDID("$FreeBSD$");
 
 #include "bsdtar.h"
 #include "err.h"
+#include <archive_entry.h>
 
 struct progress_data {
 	struct bsdtar *bsdtar;
