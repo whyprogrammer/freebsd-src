@@ -258,6 +258,7 @@ read_archive(struct bsdtar *bsdtar, char mode, struct archive *writer)
 			break;
 
 		r = archive_read_next_header(a, &entry);
+		lafe_warnc(0, (const char *)archive_entry_pathname(entry));
 		progress_data.entry = entry;
 		if (r == ARCHIVE_EOF)
 			break;
